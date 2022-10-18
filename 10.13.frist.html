@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>10.13——SL Task</title>
+<style>
+  h1 {
+    text-align: center;
+    color:blue;
+    font-size: larger;
+  }
+   p {
+      font-style:oblique; 
+   }     
+</style>
+</head>
+<body>
+
+<h1>javaScript简单语法练习</h1>
+<p id="demo" ></p>
+<p id="demo1" ></p>
+<p>函数计算1-10不能被7整除数的和为:</p>
+<p id= "demo2" ></p>
+
+<script>
+    result=0,j=1;
+    num = new Array();
+    for(var i=1;i<=100;i++)
+    {
+         if(i%7!=0)
+         {
+            num[j]=i;
+            result+=i;
+            j++;
+         }
+    }
+    var c="result=";
+    for(var i=1;i<j-1;i++)
+    {
+        c=c+num[i]+"+";
+        if(i%10==0) {
+            c=c+"<br>";
+          }
+    }
+    c=c+num[j-1];
+    c=c+"="+result;
+    document.getElementById("demo").innerHTML="1到100内不能被7整除的数求和:";
+    document.getElementById("demo1").innerHTML=c;
+    
+    function myFunction(num)
+    {
+        result=0;
+	 for(var i=1;i<=num;i++)
+    {
+        if(i%7!=0)
+        {
+            result+=i;
+        }
+    }
+     return result;
+    }
+
+    document.getElementById("demo2").innerHTML=myFunction(10);
+</script>
+ 
+</body>
+</html>

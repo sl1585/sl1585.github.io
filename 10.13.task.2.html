@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>10.13——SL Task</title> 
+</head>
+<body>
+
+<p>通过调用函数计算</p>
+<p id="demo"></p>
+<script>
+function myFunction(num){
+    result=0;
+	for(var i=1;i<=num;i++)
+    {
+        if(i%7!=0)
+        {
+            result+=i;
+        }
+    }
+    return result;
+}
+document.getElementById("demo").innerHTML=myFunction(10);
+</script>
+
+</body>
+</html>

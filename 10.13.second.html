@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+<h1>函数简单运用</h1>
+
+<p>请输入需要计算的数字:</p>
+<input id="num1">
+<button type="button" onclick="getKey()">计算</button>
+<p id="demo2" ></p>
+
+<script>
+    function getKey()
+    {
+      var x,y;
+      x=document.getElementById("num1").value;
+      myFanction(x);
+ 
+    }
+    function myFanction(num)
+    {
+      var result=0,i=1;
+    
+      while(i<=num)
+      {
+        console.log("in")
+        if(i%7!=0)         
+        {
+          result+=i;
+        };
+        i++;
+      };
+      
+      document.getElementById("demo2").innerHTML=result;
+    }
+
+</script>
+
+</body>
+</html>

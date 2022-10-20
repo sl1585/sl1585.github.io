@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+<script>
+var txt="";
+function message(){
+	try {
+		adddlert("Welcome guest!");
+	}
+	catch(err) {
+		txt="本页有一个错误。\n\n";
+		txt+="错误描述:商品的数值不能小于0!" + err.message + "\n\n";
+		txt+="点击确定继续。\n\n";
+		alert(txt);
+	}
+}
+
+function myFunction2()
+    {
+
+      var temp1,temp2;
+      temp1=temp2="";
+      temp1= document.getElementById("kltaiduola").value;
+      temp2= document.getElementById("kltaishaola").value;
+      console.log(temp1);
+      console.log(temp2);
+
+      if(temp2=="+")
+      {
+        num1++;
+        document.getElementById("klsl").innerHTML=num1;
+
+      }
+
+      if(temp1=="-")
+      {
+         if(num1>0)
+         {
+          document.getElementById("klsl").innerHTML=num1;
+         }
+         else
+         {
+          num1=0;
+          document.getElementById("klsl").innerHTML=num1;
+         }
+      }
+
+    }
+    var temp1 = document.getElementById("zjsl").value;
+    var temp2 = document.getElementById("klsl").value;
+</script>
+</head>
+<body>
+
+<input type="button" value="-" onclick="message()" />
+
+</body>
+</html>
